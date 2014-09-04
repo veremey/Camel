@@ -1,0 +1,561 @@
+$blue: #001938
+$blue_l: #388dd0
+$yellow: #ffe02d
++font(univers_condensed_bold, univers_condensed_bold)  
+=bold
+	font-family: "univers_condensed_bold", Verdana, Arial, sans-serif 
+body
+	background: #011937 url(../img/body-bg.png) 0 0 repeat-x
+	font: normal 14px/1.5 Arial, sans-serif 
+	color: $blue 
+a
+	text-decoration: none
+	
+.l-layout
+	position: relative
+	margin: 0 auto 
+	width: 960px
+	
+.header
+	position: relative
+.header__top
+	position: relative
+	height: 256px
+	+g(#05143b, #388ed0)
+	&:before,
+	&:after
+		content: ""
+		position: absolute
+	&:before
+		top: 0
+		left: 0
+		width: 745px
+		height: 284px
+		background: url(../img/camel-title.png) 0 0 no-repeat  
+	&:after
+		bottom: -28px
+		right: -17px
+		width: 403px
+		height: 220px
+		background: url(../img/camel.png) 0 0 no-repeat  
+.header__user
+	position: absolute
+	left: 276px
+	right: 0
+	top: 166px
+	z-index: 2
+	line-height: 1.2
+.user-item
+	display: inline-block
+	vertical-align: bottom
+	margin-right: 50px
+	max-width: 155px
+.user-item__img
+	display: inline-block
+	vertical-align: bottom
+	width: 60px
+	height: 60px
+	overflow: hidden
+	border: 1px solid #153b6b
+	img
+		display: block
+		max-width: 100%
+		height: auto
+
+.user-item__info
+	display: inline-block
+	margin-left: 3px
+	vertical-align: bottom
+	span
+		display: block
+		color: #fff 
+	a
+		color: $yellow   
+.user-bonus,
+.user-invite,
+.user-enter
+	display: inline-block
+	vertical-align: bottom
+	padding-left: 24px
+	position: relative
+	color: $yellow  
+	&:before
+		content: ""
+		position: absolute
+		
+.user-bonus
+	margin-right: 40px
+	padding-right: 18px
+	&:before
+		top: -2px
+		left: 0 
+		+s(star) 
+	sup
+		position: absolute
+		top: -6px
+		right: 0
+		width: 16px
+		height: 16px
+		line-height: 16px
+		text-align: center
+		color: #fff 
+		background: #3e9ce6
+		+border-radius(50%) 
+
+.user-invite
+	&:before
+		top: 1px
+		left: 0 
+		+s(mail) 
+.user-enter
+	position: absolute
+	bottom: 0
+	right: 0
+	padding: 0 14px 0 0 
+	&:before
+		top: 1px
+		right: 0 
+		+s(enter) 
+
+.menu
+	position: absolute
+	bottom: -68px
+	left: 0
+	right: 0
+	white-space: nowrap
+	font-size: 0
+	+g(#183c60, #08284b)
+	li
+		display: inline-block
+		width: 16%
+		text-align: center
+		position: relative
+		&.is-new,
+		&:first-child
+			a
+				&:before
+					display: none
+		&:last-child
+			width: 20%
+			a
+				&:after
+					display: none
+		&:hover
+			a
+				+g(#366fa1, #296294)
+				border-top-color: rgba(255,255,255,.2) 
+				border-bottom-color: #3f729f
+				&:before,
+				&:after
+					display: none
+	a
+		display: block
+		position: relative
+		border-top: 1px solid #396f9f 
+		border-bottom: 1px solid #062344 
+		height: 39px
+		line-height: 39px
+		text-shadow: 0 -1px 1px rgba(0,0,0,.6)
+		color: #fff
+		+bold
+		font-size: 16px
+		text-transform: uppercase 
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			bottom: -1px
+			width: 1px
+			top: 0px
+		&:before		
+			left: 0
+			background: #294665 
+		&:after
+			right: 0
+			background: #07284c
+	.is-new i
+		display: block
+		position: absolute
+		top: 4px
+		right: -8px
+		+s(new)	
+	
+.l-main
+	padding-top: 100px
+	+clr
+	background: #011936 url(../img/main-bg.png) 0 0 repeat-x 
+.sidebar
+	float: left
+	width: 204px
+
+.logo
+	display: block
+	margin:  0 15px
+
+.nav
+	margin: 48px 22px
+	width: 162px
+	+border-radius(5px)
+	background: #ffdf2d
+	overflow: hidden
+	+box-shadow(0 3px 20px rgba(0,0,0,.35))
+	+background-image(linear-gradient(bottom, #ffc50b 0%, #fff321 100%))
+.nav__item
+	border-bottom: 1px solid #e6b40d 
+	+box-shadow(0 1px 1px 0 rgba(255,255,255,.4))
+	&:hover
+		background-color: rgba(255,255,255,.6) 
+.nav__link
+	position: relative
+	display: block
+	padding-left: 50px
+	color: $blue
+	+bold
+	text-transform: uppercase 
+	height: 41px
+	line-height: 41px
+	text-shadow: 0 1px 1px rgba(255,255,255,.7)
+	i
+		position: absolute
+.icon-camel,
+.icon-chair,
+.icon-download,
+.icon-star,
+.icon-fun,
+.icon-forum
+	left: 15px
+	top: 50%
+	margin-top: -10px
+	+s(icon-camel)
+.icon-chair
+	+s(chair)
+.icon-download
+	left: 19px 
+	+s(downl)
+.icon-star
+	left: 19px
+	+s(sideb_star)
+.icon-fun
+	left: 19px 
+	+s(side_smile)
+.icon-forum
+	left: 19px 
+	+s(side_forum)
+
+.sidebar__in
+	padding: 0px 28px 
+.sidebar__title
+	margin-bottom: 20px
+	border-bottom: 1px solid #244567 
+	padding-bottom: 5px
+	font-size: 12px
+	color: #fff
+	text-transform: uppercase
+	font-weight: normal
+	&.is-yellow
+		color: $yellow 
+.sidebar__date
+	a
+		color: #FFF 
+.poll
+	margin-bottom: 70px 
+.poll__title
+	font-size: 12px
+	color: #fff 
+.poll__form
+	position: relative
+	margin-bottom: 14px
+	border-bottom: 1px solid #244567
+	.radio-wrap
+		&:last-child
+			margin-bottom: 20px 
+	&:after
+		content: ""
+		position: absolute
+		left: 50%
+		bottom: -14px
+		margin-left: -73px
+		+s(poll-shadow) 
+
+.btn
+	padding: 4px 15px 5px
+	font-size: 12px
+	color: #fff 
+	+border-radius(5px)
+	+box-shadow(0 3px 10px rgba(0,0,0,.28))
+.btn_blue
+	background: #175f97
+	+background-image(linear-gradient(top, #175f97 0%, #0a3769 100%))
+.radio
+	display: inline-block
+	color: $yellow 
+	input
+		position: absolute
+		left: 0
+		top: 4px
+		opacity: 0
+		z-index: 2
+		&:checked
+			+ span
+				&:after
+					content: ""
+					position: absolute
+					left: -18px
+					top: 6px
+					width: 8px
+					height: 8px
+					+border-radius(50%)
+					background: $blue
+	span
+		position: relative
+		display: inline-block
+		padding-left: 0px
+		margin-left: 23px
+		font-size: 12px
+		&:before
+			content: ""
+			position: absolute
+			left: -20px
+			top: 4px
+			+s(radio)
+.sidebar_your
+	background-color: #072543 
+.sidebar__news
+	margin-top: 14px
+.sidebar__date
+	color: #FFF
+	font: 12px Arial, sans-serif
+.sidebar__news-content
+	padding-bottom: 14px
+	border-bottom: 1px solid #244567
+	a
+		color: $yellow 
+		font: 12px Arial, sans-serif
+
+.main
+	position: relative
+	float: left
+	background: #e7e8e8 url(../img/content-bg.png) 0 100% repeat-x 
+	width: 727px
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	+clr
+
+
+.main-col
+	margin: 55px 40px 0px 35px 
+	+clr
+.page-top
+	margin: 55px 40px 0 35px
+	color: #186098 
+	+clr
+.page-title
+	float: left
+	font-weight: normal
+.sort
+	float: right
+	margin-top: 10px
+	font-size: 0
+	+clr
+.sort__link  
+	position: relative
+	margin-left: 20px
+	padding-right: 16px
+	display: inline-block
+	font-size: 12px
+	color: $blue_l
+	&:after
+		content: ""
+		position: absolute
+		top: 4px
+		right: 0
+		+arr(6,10,#388dd0,l)
+	&.is-active
+		color: $blue 
+		&:after
+			top: 5px
+			+arr(10,6,#001938,b)
+
+.content__wrapper
+	position: relative
+	margin-bottom: 28px
+	.content__img
+		float: left
+		img
+			width: 150px
+			height: 110px
+	+clr
+.content__item
+	float: left
+	margin-left: 18px
+	width: 473px
+	&:hover
+		.content__text,
+			border-bottom: 1px solid $blue
+		.content__caption a 
+			border-bottom: 1px solid $blue_l
+.content__text
+	color: $blue 
+.content__caption
+	display: inline
+	.content__title
+		color: $blue_l 
+.content__comment
+	display: inline-block
+	margin-top: 10px
+	color: $blue_l 
+	border-bottom: 1px solid transparent
+	&:hover
+		border-bottom: 1px solid $blue_l 
+
+.content__more
+	position: relative
+	border: 1px solid rgba(255,255,255,.7)
+	background-color: #e7e7e7
+	text-align: center
+	line-height: 30px 
+	text-transform: uppercase
+	height: 30px 
+	margin-bottom: 27px 
+	+box-shadow(0 3px 15px rgba(0,0,0,.3))
+	a
+		color: $blue_l 
+		position: relative
+		i
+			position: absolute
+			top: 4px
+			left: -10px
+			+arr(6,10,#388dd0,r) // Трикутник
+.content__line
+	border-bottom: 1px solid #848e98
+
+.rss
+	float: left
+	text-transform: uppercase
+	height: 20px
+	-webkit-border-radius: 5px 
+	border-radius: 5px
+	padding: 0 7px 0 4px
+	background: #D88C15
+	border: 1px solid #b97710
+	color: #fff
+	margin: 35px 0 0 35px
+.box-bottom__form
+	float: right
+	margin-right: 40px
+	line-height: 85px
+.form__mail
+	width: 200px
+	height: 24px
+	color: #001938 
+	margin-left: 10px
+	padding-left: 4px 
+	+box-shadow(inset 0 1px 3px rgba(0,0,0,.6)) 
+.box-bottom__btn
+	width: 37px
+	height: 24px
+	background: #175f97
+	text-align: center
+	font-size: 12px
+	color: #fff 
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	+border-radius(5px)
+	+box-shadow(0 3px 10px rgba(0,0,0,.28))
+	+background-image(linear-gradient(top, #175f97 0%, #0a3769 100%))
+
+.futter
+	position: relative
+	bottom: 0
+	background: #011937 url(../img/futer_bg.png) 0 0 repeat-x
+	height: 125px 
+.social
+	position: relative
+	width: 360px
+	height: 45px
+	top: 30px 
+	float: left
+	-webkit-border-radius: 0 5px 5px 0 
+	border-radius: 0 5px 5px 0 
+	+background-image(linear-gradient(bottom, #135180 0%, #05173f 100%))
+	p
+		font-size: 11px
+		line-height: 45px
+		margin-left: 30px 
+		color: #FFF 
+.social__f,
+.social__vk,
+.social__you,
+.social__g
+	display: block
+	position: absolute
+	bottom: 25% 
+.social__f
+	width: 16px
+	height: 28px
+	right: 130px 
+	background: url(../img/social_f.png) 0 0 no-repeat
+.social__vk
+	width: 22px
+	height: 27px
+	right: 90px 
+	background: url(../img/social_vk.png)
+.social__you,
+.social__g
+	width: 25px
+	height: 25px
+	-webkit-border-radius: 6px 
+	border-radius: 6px 
+.social__you
+	right: 50px 
+	background: url(../img/social_you.png)
+.social__g
+	right: 10px 
+	background: url(../img/social_g.png)
+.box-futter__form
+	position: absolute
+	top: 40px
+	right: 250px
+.f__search
+	height: 24px
+	padding-left: 5px 
+	margin-right: 10px
+	color: #fff 
+	border: 1px solid #03162E 
+	background: #0A2038 
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0, .7) 
+	box-shadow: inset 0 1px 1px rgba(0,0,0, .7) 
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+.f__submit
+	width: 64px
+	height: 24px
+	background: #175f97
+	text-align: center
+	font-size: 12px
+	color: #fff 
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	+border-radius(5px)
+	+box-shadow(0 3px 10px rgba(0,0,0,.28))
+	+background-image(linear-gradient(top, #175f97 0%, #0a3769 100%))
+.copy
+	float: right
+	padding: 25px 30px
+	a
+		color: $yellow
+		font-size: 12px 
+	.discover
+		color: #fff
+
+.danger
+	background: #fff
+	font-size: 72px
+	line-height: 73px
+	text-align: center
+	color: #c5ccd3
+	text-transform: uppercase  

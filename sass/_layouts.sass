@@ -1,0 +1,102 @@
+.gallery
+	+clr
+.gallery__title
+	color: #388DD0
+	float: left
+	+clr
+.gallery__location
+	margin-top: 15px
+	color: #AEAFB0 
+	font-size: 12px 
+	p
+		float: left
+	+clr
+.gallery__cont
+	height: 210px
+	margin-top: 20px
+	+clr
+.gallery__left
+	float: left
+	width: 320px
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	+clr
+.gallery__img
+	+clr
+	img
+		float: left
+		width: 100px
+		height: 100px
+		cursor: pointer
+		margin: 0 5px 10px 5px
+		&:first-child
+			margin-left: 0
+		&:last-child
+			margin-right: 0
+.gallery__right
+	float: right
+	width: 320px
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	+clr
+.gallery__video
+	img
+		width: 320px
+		height: 210px
+		cursor: pointer
+	+clr
+
+.content__more
+	margin-top: 10px 
+	+clr
+.content__more-link
+	position: relative
+	&:after
+		content: "" 
+		position: absolute
+		top: 3px
+		right: -13px
+		+arr(6,10,#388dd0,r)
+.content__text-wrap
+	width: 100%
+	+clr
+	.content__text
+		width: 300px
+		float: left
+		color: #001938 
+		margin-right: 25px
+		.content__text-link
+			color: #388DD0 
+			font-size: 12px
+			&:hover
+				border-bottom: 1px solid #388DD0 
+.text__more,
+.text__hide
+	position: relative
+	display: block
+	color: #388DD0
+	margin-bottom: 30px
+	text-align: center
+	line-height: 30px
+	-webkit-border-radius: 5px/25px 25px 5px 5px 
+	border-radius: 5px/25px 25px 5px 5px 
+	+box-shadow(0 2px 4px rgba(0, 0, 0, 0.5), 0 -18px 12px -3px rgba(231, 231, 231, 0.98) inset, 0 0 0px, 0 0 20px rgba(0, 0, 0, 0.02) inset)
+	&:hover
+		text-decoration: underline
+		+box-shadow(0 2px 4px rgba(255, 255, 255, 0.5) inset, 0 18px 12px -3px rgba(231, 231, 231, 0.98) inset, 0 0 0px, 0 0 20px rgba(0, 0, 0, 0.02) inset)
+	&:before
+		content: "" 
+		position: absolute
+		top: 12px
+		left: 103px
+		+arr(10, 6, #388DD0, t)
+.text__more
+	+box-shadow(0 1px 0px rgba(0, 0, 0, 0.5), 0 -18px 12px -3px rgba(231, 231, 231, 0.98) inset, 0 0 0px, 0 0 20px rgba(0, 0, 0, 0.02) inset)
+	&:before
+		content: "" 
+		position: absolute
+		top: 10px
+		left: 70px
+		+arr(6, 10, #388DD0, r)
