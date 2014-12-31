@@ -492,6 +492,12 @@ a
 	display: block
 	position: absolute
 	bottom: 25%
+	&:hover
+		-webkit-transform: scale(1.1)
+		-moz-transform: scale(1.1)
+		-ms-transform: scale(1.1)
+		-o-transform: scale(1.1)
+		transform: scale(1.1)
 .social__f
 	width: 16px
 	height: 28px
@@ -504,8 +510,8 @@ a
 	background: url(../img/social_vk.png)
 .social__you,
 .social__g
-	width: 25px
-	height: 25px
+	width: 24px
+	height: 24px
 	-webkit-border-radius: 6px
 	border-radius: 6px
 .social__you
@@ -543,6 +549,8 @@ a
 	+border-radius(5px)
 	+box-shadow(0 3px 10px rgba(0,0,0,.28))
 	+background-image(linear-gradient(top, #175f97 0%, #0a3769 100%))
+	&:hover
+		+background-image(linear-gradient(top, #0a3769 0%, #175f97 100%))
 .copy
 	float: right
 	padding: 25px 30px
