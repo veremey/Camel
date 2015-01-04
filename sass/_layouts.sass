@@ -23,13 +23,15 @@
 	box-sizing: border-box
 	+clr
 .gallery__img
+	a
+		display: inline-block
 	+clr
 	img
 		float: left
 		width: 100px
 		height: 100px
 		cursor: pointer
-		margin: 0 5px 10px 5px
+		margin: 0 5px 5px 5px
 		&:first-child
 			margin-left: 0
 		&:last-child
@@ -42,10 +44,11 @@
 	box-sizing: border-box
 	+clr
 .gallery__video
+	a
+		display: inline-block
 	img
 		width: 320px
 		height: 210px
-		cursor: pointer
 	+clr
 
 .content__more
