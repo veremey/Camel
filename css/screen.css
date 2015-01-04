@@ -261,7 +261,7 @@ a { text-decoration: none; }
 .content__more { margin-top: 10px; *zoom: 1; }
 .content__more:after { content: " "; display: table; clear: both; }
 
-.content__more-link { position: relative; }
+.content__more-link { position: relative; color: #388dd0; }
 .content__more-link:after { content: ""; position: absolute; top: 3px; right: -13px; width: 0px; height: 0px; border-style: solid; border-width: 5px 0 5px 6px; border-color: transparent transparent transparent #388dd0; }
 
 .content__text-wrap { width: 100%; *zoom: 1; }
